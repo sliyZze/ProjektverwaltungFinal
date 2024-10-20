@@ -1,4 +1,5 @@
-@token = eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzUFQ0dldiNno5MnlQWk1EWnBqT1U0RjFVN0lwNi1ELUlqQWVGczJPbGU0In0.eyJleHAiOjE3MjUzNzE5NjcsImlhdCI6MTcyNTM2ODM2NywianRpIjoiMDc1NGRmOGItZjA2NC00ODZiLTkzNDItNjk0NWM2OTQ1Y2RmIiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5zenV0LmRldi9hdXRoL3JlYWxtcy9zenV0IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjU1NDZjZDIxLTk4NTQtNDMyZi1hNDY3LTRkZTNlZWRmNTg4OSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVtcGxveWVlLW1hbmFnZW1lbnQtc2VydmljZSIsInNlc3Npb25fc3RhdGUiOiI0ZDAwNWU5My03OWI4LTQ4OGMtOGI1ZS1kYzMzODM4OGZkNmMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsicHJvZHVjdF9vd25lciIsIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1zenV0IiwidW1hX2F1dGhvcml6YXRpb24iLCJ1c2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIifQ.Wl9t2UazAimPxcNByMyY0Zl2oI_ScVtehQ0iglpTNPBr9me1xf2ky0nUgVOP04H-TWAuQJQctVMP_Yi3YPDTxm7PXeQ_lj9JyK6nCDpb5gz5VIMNCYcLjWLz6R1pfbjZGkeID6oYTXSsoZSy6arof-rMG1phjnIdiXDwF4lFgOgqUoxbv58mvs73DUTKZjIEaw-N7A_ZQrC35JX6CaKUlnsaGepa2LQ-Pz6Smg1JipxOwjlH4TEBsBjifMjkedzfPm2NfwEy1qUHMLtLMLukIVH3iaSUVJ3hEZe6606ne1qwumT6Lnm3PAXSbF2Hxap89nbmG08EOlGx5VwMylEAVg
+@token = eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzUFQ0dldiNno5MnlQWk1EWnBqT1U0RjFVN0lwNi1ELUlqQWVGczJPbGU0In0.eyJleHAiOjE3MjkxNzIzNTQsImlhdCI6MTcyOTE2ODc1NCwianRpIjoiNTVmMmI2MzUtYzI0Mi00Y2M2LTgyZDMtMmVhOTZmOTM1NDVhIiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5zenV0LmRldi9hdXRoL3JlYWxtcy9zenV0IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjU1NDZjZDIxLTk4NTQtNDMyZi1hNDY3LTRkZTNlZWRmNTg4OSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVtcGxveWVlLW1hbmFnZW1lbnQtc2VydmljZSIsInNlc3Npb25fc3RhdGUiOiI2MDI0ZTFiYy03ZGM1LTRhMGMtOTI1Yi1lNzgyN2MzYjNjOTQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsicHJvZHVjdF9vd25lciIsIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1zenV0IiwidW1hX2F1dGhvcml6YXRpb24iLCJ1c2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIifQ.cDtABoPRsqxSUDEj-6Q0vOyvCrt49jhxO-KiZiI3XNA2R4BXJQMBjT9i8x1kM7n_lOWfWkn7Y_R5jjfWrHtp4BN85iat6lxOiHkCG9j0ZQ1v2fnlF_DZEu6XwxSw5YFkmZmremPcJbmpS_qsXESDQODhzVAr34BlhLLdzhiVsQ0Nw5xGm1gVh7fqR92XbUsx69YHGmsOPaE77MkNyHSV0msWkUNRVxR2X_hztdoDFvtZVLrD9lVDYoMRW4leGjjz33enz7buBI9q6NTOZYsRUSzduxX_Pk9-BoVtubw94QRG93RbZY6CpAvNrZfrD2yFXPOVZyZsv0F-VD9Zank1qg
+
 ###
 GET localhost:8080/welcome
 
@@ -16,6 +17,93 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-    "message": "test"
+  "message": "test"
 }
 
+###
+POST https://keycloak.szut.dev/auth/realms/szut/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&client_id=employee-management-service&username=user&password=test
+###
+
+###
+GET http://localhost:8080/hello/
+Authorization: Bearer {{token}}
+
+### create new project
+POST localhost:8080/project
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "bezeichnung": "Email Notifyer",
+  "verantwortlicherMitarbeiter": 297,
+  "kundenId": 45,
+  "kundenName": "Thorsten",
+  "kommentar": "ein microservice der email versendet",
+  "startDatum": "2024-10-10",
+  "gepEndDatum": "2024-12-10",
+  "tatEndDatum": "2024-12-25",
+  "qualifikationen": ["php", "java", "c++", "Docker", "React" ,"Bootstrap"]
+}
+###
+# curl -X 'GET'
+#  'https://employee.szut.dev/employees'
+#  -H 'accept: application/json'
+#  -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzUFQ0dldiNno5MnlQWk1EWnBqT1U0RjFVN0lwNi1ELUlqQWVGczJPbGU0In0.eyJleHAiOjE3Mjc3MDE0MDcsImlhdCI6MTcyNzY5NzgwNywianRpIjoiMDQ4NTFmMWMtMmY5MC00MDEwLWI0MjMtN2FlZmRmNmRmZGM5IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5zenV0LmRldi9hdXRoL3JlYWxtcy9zenV0IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjU1NDZjZDIxLTk4NTQtNDMyZi1hNDY3LTRkZTNlZWRmNTg4OSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVtcGxveWVlLW1hbmFnZW1lbnQtc2VydmljZSIsInNlc3Npb25fc3RhdGUiOiJiMjE2MjYzOC0xNmIxLTQ0OTMtODU1My04ZjY1ZDA3NWY4MWMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsicHJvZHVjdF9vd25lciIsIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1zenV0IiwidW1hX2F1dGhvcml6YXRpb24iLCJ1c2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIifQ.NLovObK52TDvBfnOCFkZ2QAC7p-72LNDKul-nJrrhZiCObXkWGXzj5Z0eXOo1wthseO2-Ws_u7ZAwJkqwutBe5y8nqrwS2_7SCmZb_nLu0xQ4gExP6BTf0ecrH6IlJ1yNAzsOXBRONXiMagei1odKBHY8-1_yZeLpFrJ6Ab2O7KIe44nYX6PD_TMrCBT01DkwFJKBKAHdtgsRUv318Vgk2-f1y5cR-2jn51a1d_PDhADx7R5WGEbzyGzPwOaMdHj8WNBJN8UVx8f4VwYyKP77ofT4X742XfBECGnH0q11v3gculQjYkREs_Ltzn10eYjCH1NkNDvMGek1HX1By2axg'
+GET https://employee.szut.dev/employees
+accept: application/json
+Authorization: Bearer {{token}}
+
+### del project
+DELETE localhost:8080/project/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### update project
+POST localhost:8080/project/update/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "bezeichnung": "testupdate",
+  "verantwortlicherMitarbeiter": 299,
+  "kundenId": 5,
+  "kundenName": "testa",
+  "kommentar": "testo",
+  "startDatum": "2023-09-26",
+  "gepEndDatum": "2023-09-26",
+  "tatEndDatum": "2023-09-26",
+  "qualifikationen": ["python", "js"]
+}
+
+### get all projects
+GET localhost:8080/project/all
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### get project
+GET localhost:8080/project/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### add employee to project
+POST localhost:8080/project/1/add/employee/299
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### remove a employee from project
+DELETE localhost:8080/project/1/remove/employee/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### get all employees from project
+GET localhost:8080/project/1/employees
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### get all projects from employee
+GET localhost:8080/project/employee/297
+Authorization: Bearer {{token}}
+Content-Type: application/json
