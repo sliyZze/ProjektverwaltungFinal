@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.util.Set;
+import java.util.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -38,10 +38,15 @@ public class ProjektEntity {
     @ElementCollection
     @CollectionTable(name = "projekt_mitarbeiter", joinColumns = @JoinColumn(name = "projekt_id"))
     @Column(name = "mitarbeiter_id")
-    private Set<Long> mitarbeiterIds; // Liste von Mitarbeiter-IDs statt einer Entität
+    private Set<Long> mitarbeiterIds;
 
     @ElementCollection
     @CollectionTable(name = "projekt_qualifikationen", joinColumns = @JoinColumn(name = "projekt_id"))
-    @Column(name = "qualifikation")
-    private Set<String> qualifikationen;
+    @MapKeyColumn(name = "qualifikation")
+    private Map<String, QualifikationDetail> qualifikationen = new HashMap<>();
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "projekt_id")
+    private List<MitarbeiterQualifikation> usedEmployeeQualifikationen = new ArrayList<>();
+
 }

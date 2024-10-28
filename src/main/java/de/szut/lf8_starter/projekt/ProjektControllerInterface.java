@@ -1,5 +1,6 @@
 package de.szut.lf8_starter.projekt;
 
+import de.szut.lf8_starter.mitarbeiter.dto.MitarbeiterCreateSkillSet;
 import de.szut.lf8_starter.projekt.dto.ProjektCreateDto;
 import de.szut.lf8_starter.projekt.dto.ProjektUpdateDto;
 import io.swagger.v3.oas.annotations.Operation;
@@ -71,7 +72,7 @@ public interface ProjektControllerInterface {
             @ApiResponse(responseCode = "404", description = "employee addition failed", content = @Content)
     })
     @PostMapping("/{id}/add/employee/{eid}")
-    ResponseEntity<?> addEmployee(@PathVariable long id, @PathVariable long eid);
+    ResponseEntity<?> addEmployee(@PathVariable long id, @PathVariable long eid, @RequestBody @Valid MitarbeiterCreateSkillSet mitarbeiterCreateSkillSet);
 
     @Operation(summary = "remove a employee from project", description = "remove employee from project")
     @ApiResponses(value = {

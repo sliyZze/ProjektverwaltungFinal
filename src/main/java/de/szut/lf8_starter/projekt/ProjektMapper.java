@@ -6,10 +6,7 @@ import de.szut.lf8_starter.mitarbeiter.dto.QualifikationGetDto;
 import de.szut.lf8_starter.projekt.dto.*;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class ProjektMapper {
@@ -22,6 +19,16 @@ public class ProjektMapper {
 
     public ProjektEntity mapCreateDtoToEntity(ProjektCreateDto dto, long responsibleEmployee) {
         var entity = new ProjektEntity();
+
+        Map<String, QualifikationDetail> entityMap = new HashMap<>();
+
+        dto.getQualifikationen().forEach((key, css) -> {
+            QualifikationDetail entityx = new QualifikationDetail();
+            entityx.setSoll(css.getSoll()); // Setze den "Soll"-Wert aus dem DTO
+            entityx.setIst(0L); // Standardwert für "Ist", da dieser nur beim Abrufen relevant ist
+            entityMap.put(key, entityx);
+        });
+
         entity.setBezeichnung(dto.getBezeichnung());
         entity.setVerantwortlicherMitarbeiter(responsibleEmployee);
         entity.setKundenId(dto.getKundenId());
@@ -30,7 +37,7 @@ public class ProjektMapper {
         entity.setStartDatum(dto.getStartDatum());
         entity.setGepEndDatum(dto.getGepEndDatum());
         entity.setTatEndDatum(dto.getTatEndDatum());
-        entity.setQualifikationen(dto.getQualifikationen());
+        entity.setQualifikationen(entityMap);
         entity.setMitarbeiterIds(new HashSet<>());
         return entity;
     }
@@ -58,15 +65,16 @@ public class ProjektMapper {
             projektDetails.setEndDatum(projektEntity.getTatEndDatum());
 
             // Finde die gemeinsamen Qualifikationen
-            Set<String> projektQualifikationen = projektEntity.getQualifikationen();
+            Map<String, QualifikationDetail> projektQualifikationen = projektEntity.getQualifikationen();
             List<String> gemeinsameQualifikationen = mitarbeiterQualifikationen.stream()
                     .map(QualifikationGetDto::getSkill)
-                    .filter(projektQualifikationen::contains)
+                    .filter(projektQualifikationen::containsKey)
                     .toList();
-            projektDetails.setRollen(gemeinsameQualifikationen);
 
+            projektDetails.setRollen(gemeinsameQualifikationen);
             projectList.add(projektDetails);
         }
+
 
         MitarbeiterProjektResponseDto responseDto = new MitarbeiterProjektResponseDto();
         responseDto.setMitarbeiterId(mitarbeiterCreateDto.getId());

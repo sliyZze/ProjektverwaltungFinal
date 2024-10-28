@@ -1,11 +1,13 @@
 package de.szut.lf8_starter.projekt.dto;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import de.szut.lf8_starter.projekt.QualifikationDetail;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.Map;
 import java.util.Set;
 
 @AllArgsConstructor
@@ -31,12 +33,12 @@ public class ProjektGetDto {
 
     private LocalDate tatEndDatum;
 
-    private Set<String> qualifikationen;
+    private Map<String, QualifikationDetail> qualifikationen;
 
     private Set<Long> mitarbeiterIds;
 
     @JsonCreator
-    public ProjektGetDto(long id,String bezeichnung,long verantwortlicherMitarbeiter, long kundenId, String kundenName, String kommentar, LocalDate startDatum, LocalDate gepEndDatum, LocalDate tatEndDatum, Set<String> qualifikationen, Set<Long>  mitarbeiter) {
+    public ProjektGetDto(long id,String bezeichnung,long verantwortlicherMitarbeiter, long kundenId, String kundenName, String kommentar, LocalDate startDatum, LocalDate gepEndDatum, LocalDate tatEndDatum, Map<String, QualifikationDetail> qualifikationen, Set<Long>  mitarbeiter) {
         this.id = id;
         this.bezeichnung = bezeichnung;
         this.verantwortlicherMitarbeiter = verantwortlicherMitarbeiter;

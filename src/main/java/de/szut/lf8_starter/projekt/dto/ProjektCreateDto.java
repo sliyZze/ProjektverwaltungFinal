@@ -2,12 +2,15 @@ package de.szut.lf8_starter.projekt.dto;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import de.szut.lf8_starter.projekt.QualifikationDetail;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 @Getter
@@ -45,7 +48,9 @@ public class ProjektCreateDto {
     private LocalDate tatEndDatum;
 
     @NotBlank
-    private Set<String> qualifikationen;
+    private Map<String, QualifikationDetailCreateDto> qualifikationen = new HashMap<>();
+
+//    private HashMap<String,Long> qualifis;
 
     @JsonCreator
     public ProjektCreateDto() {

@@ -1,6 +1,7 @@
 package de.szut.lf8_starter.projekt;
 
-import de.szut.lf8_starter.RequestEmployeeService;
+import de.szut.lf8_starter.mitarbeiter.dto.MitarbeiterCreateSkillSet;
+import de.szut.lf8_starter.request.RequestEmployeeService;
 import de.szut.lf8_starter.mitarbeiter.dto.MitarbeiterGetDto;
 import de.szut.lf8_starter.mitarbeiter.dto.MitarbeiterProjektResponseDto;
 import de.szut.lf8_starter.mitarbeiter.dto.QualifikationGetDto;
@@ -8,6 +9,8 @@ import de.szut.lf8_starter.projekt.dto.ProjektCreateDto;
 import de.szut.lf8_starter.projekt.dto.ProjektCreateDtoAllEmployees;
 import de.szut.lf8_starter.projekt.dto.ProjektGetDto;
 import de.szut.lf8_starter.projekt.dto.ProjektUpdateDto;
+import de.szut.lf8_starter.request.RequestKundenService;
+import de.szut.lf8_starter.request.RequestService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +31,7 @@ public class ProjektController implements ProjektControllerInterface {
     private final ProjektService service;
     private final ProjektMapper projektMapper;
     RequestEmployeeService employeeServiceRequest;
+    RequestKundenService kundenServiceRequest;
 
     public ProjektController(ProjektService service, ProjektMapper projektMapper, RequestEmployeeService request) {
         this.service = service;
@@ -39,6 +43,7 @@ public class ProjektController implements ProjektControllerInterface {
     public ResponseEntity<?> create(@RequestBody @Valid ProjektCreateDto projektCreateDto) {
 
         MitarbeiterGetDto responsibleEmployee = employeeServiceRequest.getEmployee(projektCreateDto.getVerantwortlicherMitarbeiter());
+//        kundenServiceRequest.checkKunde(projektCreateDto.getKundenId());
         ProjektEntity projektEntity = this.projektMapper.mapCreateDtoToEntity(projektCreateDto,responsibleEmployee.getId());
         projektEntity = this.service.create(projektEntity);
         ProjektGetDto projektDto = projektMapper.mapToGetDto(projektEntity);
@@ -55,6 +60,7 @@ public class ProjektController implements ProjektControllerInterface {
     public ResponseEntity<?> update(@RequestBody @Valid ProjektUpdateDto projektUpdateDto, @PathVariable long id) {
 
         MitarbeiterGetDto responsibleEmployee = employeeServiceRequest.getEmployee(projektUpdateDto.getVerantwortlicherMitarbeiter());
+        kundenServiceRequest.checkKunde(projektUpdateDto.getKundenId());
         ProjektEntity projektEntity = this.projektMapper.mapUpdateDtoToEntity(projektUpdateDto, responsibleEmployee.getId());
         service.update(projektEntity,id);
         ProjektGetDto projektDto = projektMapper.mapToGetDto(projektEntity);
@@ -82,10 +88,10 @@ public class ProjektController implements ProjektControllerInterface {
     }
 
     @Override
-    public ResponseEntity<?> addEmployee(@PathVariable long id, @PathVariable long eid) {
+    public ResponseEntity<?> addEmployee(@PathVariable long id, @PathVariable long eid, @RequestBody @Valid MitarbeiterCreateSkillSet neededEmployeeSkills) {
 
         MitarbeiterGetDto employee = employeeServiceRequest.getEmployee(eid);
-        service.addEmployeeToProject(id, employee);
+        service.addEmployeeToProject(id, employee, neededEmployeeSkills);
         return ResponseEntity.ok("added employee "+ eid + " successfully to project " + id);
     }
 
