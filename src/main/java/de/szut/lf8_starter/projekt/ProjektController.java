@@ -33,17 +33,18 @@ public class ProjektController implements ProjektControllerInterface {
     RequestEmployeeService employeeServiceRequest;
     RequestKundenService kundenServiceRequest;
 
-    public ProjektController(ProjektService service, ProjektMapper projektMapper, RequestEmployeeService request) {
+    public ProjektController(ProjektService service, ProjektMapper projektMapper, RequestEmployeeService request, RequestKundenService kundenService) {
         this.service = service;
         this.projektMapper = projektMapper;
         this.employeeServiceRequest = request;
+        this.kundenServiceRequest = kundenService;
     }
 
     @Override
     public ResponseEntity<?> create(@RequestBody @Valid ProjektCreateDto projektCreateDto) {
 
         MitarbeiterGetDto responsibleEmployee = employeeServiceRequest.getEmployee(projektCreateDto.getVerantwortlicherMitarbeiter());
-//        kundenServiceRequest.checkKunde(projektCreateDto.getKundenId());
+        kundenServiceRequest.checkKunde(projektCreateDto.getKundenId());
         ProjektEntity projektEntity = this.projektMapper.mapCreateDtoToEntity(projektCreateDto,responsibleEmployee.getId());
         projektEntity = this.service.create(projektEntity);
         ProjektGetDto projektDto = projektMapper.mapToGetDto(projektEntity);

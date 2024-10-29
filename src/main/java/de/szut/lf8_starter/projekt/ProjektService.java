@@ -1,5 +1,6 @@
 package de.szut.lf8_starter.projekt;
 
+import de.szut.lf8_starter.exceptionHandling.EmployeeAlreadyInProject;
 import de.szut.lf8_starter.exceptionHandling.EmployeeNoMatchedQualification;
 import de.szut.lf8_starter.exceptionHandling.EmployeeNotFoundException;
 import de.szut.lf8_starter.exceptionHandling.EmployeeNotFreeException;
@@ -69,6 +70,10 @@ public class ProjektService {
         checkExistence(projectId);
         ProjektEntity projektEntity = find(projectId);
 
+        if (isEmployeeInProject(projektEntity, employee.getId())) {
+            throw new EmployeeAlreadyInProject("employee with id " + employee.getId());
+        }
+
         Set<String> vorhandeneSkills = getMatchingSkills(neededEmployeeSkills, employee);
         if (vorhandeneSkills.isEmpty()) {
             throw new EmployeeNoMatchedQualification("employee id " + employee.getId());
@@ -85,6 +90,7 @@ public class ProjektService {
         }
     }
 
+    // gibt die schnittmenge von dem employee und der benötigten skills wieder
     private Set<String> getMatchingSkills(MitarbeiterCreateSkillSet neededSkills, MitarbeiterGetDto employee) {
         Set<String> employeeSkills = employee.getSkillSet().stream()
                 .map(QualifikationGetDto::getSkill)
@@ -95,6 +101,7 @@ public class ProjektService {
                 .collect(Collectors.toSet());
     }
 
+    // checkt ob die skills vom mitarbeiter in dem projekt vorhanden sind
     private boolean checkProjectSkills(Set<String> vorhandeneSkills, Map<String, QualifikationDetail> projectSkills) {
         return vorhandeneSkills.stream().allMatch(projectSkills::containsKey);
     }
@@ -162,7 +169,7 @@ public class ProjektService {
     }
 
     public List<ProjektEntity> getAllEmployeeProjects(long employeeId) {
-        return repository.findAllByEmployeeId(employeeId);//responseDto;
+        return repository.findAllByEmployeeId(employeeId);
     }
 
     public void checkExistence(long id) {

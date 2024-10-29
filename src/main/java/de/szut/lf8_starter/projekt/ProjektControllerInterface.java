@@ -65,7 +65,7 @@ public interface ProjektControllerInterface {
     @GetMapping("/all")
     ResponseEntity<?> getAllProjects();
 
-    @Operation(summary = "add employee to project", description = "add a employee to a project, the employee needs the required qualifications and has to be available")
+    @Operation(summary = "add employee to project", description = "add a employee to a project, the employee needs the required qualifications and has to be available, you can choose which qualifications you want to add from the employee to the project")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully added to project",
                     content = { @Content(mediaType = "application/json") }),

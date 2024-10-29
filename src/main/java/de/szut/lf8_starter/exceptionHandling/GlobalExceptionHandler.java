@@ -45,4 +45,9 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleEmployeeNotFree(EmployeeNotFreeException ex) {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(ex.getMessage() + " employee is not available");
     }
+
+    @ExceptionHandler(EmployeeAlreadyInProject.class)
+    public ResponseEntity<String> handleEmployeeAlreadyInProject(EmployeeAlreadyInProject ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(ex.getMessage() + " is already in project");
+    }
 }

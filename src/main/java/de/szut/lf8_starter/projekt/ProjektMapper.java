@@ -24,8 +24,8 @@ public class ProjektMapper {
 
         dto.getQualifikationen().forEach((key, css) -> {
             QualifikationDetail entityx = new QualifikationDetail();
-            entityx.setSoll(css.getSoll()); // Setze den "Soll"-Wert aus dem DTO
-            entityx.setIst(0L); // Standardwert für "Ist", da dieser nur beim Abrufen relevant ist
+            entityx.setSoll(css.getSoll()); // setze den soll-wert aus dem dto
+            entityx.setIst(0L); // standardwert für ist, da dieser nur beim abrufen relevant ist
             entityMap.put(key, entityx);
         });
 

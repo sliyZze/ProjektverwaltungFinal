@@ -13,17 +13,18 @@ public class RequestKundenService extends RequestService {
         super(restTemplate);
     }
 
-    //dummy fürs checken des Kunden
+    //dummy request fürs checken des Kunden
     public boolean checkKunde(Long customerId)
     {
-        String customersServiceUrl = "https://customer.szut.dev/customers/" + customerId;
-
-        try {
-//            ResponseEntity<?> response = getRestTemplate().exchange(customersServiceUrl, HttpMethod.GET, getEntityWithAuthorization(), Boolean.class);
-            return true;
-        }catch (Exception e){
-            throw new EmployeeNotFoundException("Customer with id " + customerId + e.getMessage());
-        }
+//        String customersServiceUrl = "https://customer.szut.dev/customers/" + customerId;
+//
+//        try {
+//          ResponseEntity<?> response = getRestTemplate().exchange(customersServiceUrl, HttpMethod.GET, getEntityWithAuthorization(), CustomerDto.class);
+//          return response.getBody.getId == customerId;
+//        }catch (Exception e){
+//          throw new EmployeeNotFoundException("Customer with id " + customerId + e.getMessage());
+//        }
+        return customerId == 0;
     }
 
 }
