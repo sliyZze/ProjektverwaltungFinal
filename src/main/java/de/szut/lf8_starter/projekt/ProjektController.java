@@ -93,7 +93,7 @@ public class ProjektController implements ProjektControllerInterface {
 
         MitarbeiterGetDto employee = employeeServiceRequest.getEmployee(eid);
         service.addEmployeeToProject(id, employee, neededEmployeeSkills);
-        return ResponseEntity.ok("added employee "+ eid + " successfully to project " + id);
+        return ResponseEntity.ok("added employee "+ eid + " successfully to project " + id + "with matched qualifications");
     }
 
     @Override
