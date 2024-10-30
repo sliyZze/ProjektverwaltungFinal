@@ -23,8 +23,13 @@ public class ProjektService {
         this.repository = repository;
     }
 
-    public ProjektEntity create(ProjektEntity entity ) {
-        return repository.save(entity);
+    public ProjektEntity create(ProjektEntity entity, MitarbeiterGetDto responsibleEmployee) {
+        for (QualifikationGetDto QualiDto : responsibleEmployee.getSkillSet()) {
+            if (QualiDto.getSkill().equals("ProductOwner")) {
+                return repository.save(entity);
+            }
+        }
+        throw new RuntimeException("Mitarbeiter nicht als Projektleiter geeignet");
     }
 
     public void delete(long id) {

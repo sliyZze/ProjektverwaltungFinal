@@ -46,7 +46,7 @@ public class ProjektController implements ProjektControllerInterface {
         MitarbeiterGetDto responsibleEmployee = employeeServiceRequest.getEmployee(projektCreateDto.getVerantwortlicherMitarbeiter());
         kundenServiceRequest.checkKunde(projektCreateDto.getKundenId());
         ProjektEntity projektEntity = this.projektMapper.mapCreateDtoToEntity(projektCreateDto,responsibleEmployee.getId());
-        projektEntity = this.service.create(projektEntity);
+        projektEntity = this.service.create(projektEntity,responsibleEmployee);
         ProjektGetDto projektDto = projektMapper.mapToGetDto(projektEntity);
         return ResponseEntity.ok(projektDto); // wirft exception?
     }
