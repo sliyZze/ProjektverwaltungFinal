@@ -1,0 +1,1 @@
+- verändern, qualifikationen per id checken maybe und nicht per string namen?
