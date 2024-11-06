@@ -6,7 +6,7 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.List;
-
+//Author: Martin
 @Getter
 @Setter
 public class ProjektDetailsDto {

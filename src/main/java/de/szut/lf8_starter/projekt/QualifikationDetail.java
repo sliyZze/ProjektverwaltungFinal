@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
 import lombok.Setter;
-
+//Author: Eren
 @Setter
 @Getter
 @Embeddable

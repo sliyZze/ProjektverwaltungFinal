@@ -4,7 +4,7 @@ import de.szut.lf8_starter.mitarbeiter.dto.MitarbeiterGetDto;
 import lombok.Data;
 
 import java.util.List;
-
+//Author: Martin
 @Data
 public class ProjektCreateDtoAllEmployees {
 

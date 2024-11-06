@@ -7,7 +7,7 @@ import de.szut.lf8_starter.projekt.dto.*;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
-
+//Author: Eren
 @Service
 public class ProjektMapper {
 

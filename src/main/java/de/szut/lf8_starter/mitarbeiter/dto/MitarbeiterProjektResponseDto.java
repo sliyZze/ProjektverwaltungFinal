@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
-
+//Author: Tobias
 @Getter
 @Setter
 public class MitarbeiterProjektResponseDto {

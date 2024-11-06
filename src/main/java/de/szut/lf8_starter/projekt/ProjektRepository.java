@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
-
+//Author: Eren
 public interface ProjektRepository extends JpaRepository<ProjektEntity, Long> {
 
     @Query("SELECT p FROM ProjektEntity p WHERE :employeeId MEMBER OF p.mitarbeiterIds")

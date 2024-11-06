@@ -3,7 +3,7 @@ package de.szut.lf8_starter.projekt;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
+//Author: Eren
 @Getter
 @Setter
 @Entity
