@@ -6,6 +6,9 @@ Martin und Eren haben viel in Pair Programming gearbeitet. Da Tobias probleme mi
 haben wir unsere änderungen via .zip ausgetauscht. 
 Dadurch sind so gut wie alle commits von Eren durchgeführt worden. 
 
+Um auf den Service zugreifen zu können, muss der Bearer Token angefordert werden und einmal im
+Employee Service und diesem Service in Swagger Authentifiziert werden.
+
 Um erkenntlich zu machen, wer an welchem Code gearbeitet hat, wurde dieser mit Kommentaren
 versehen. 
 
