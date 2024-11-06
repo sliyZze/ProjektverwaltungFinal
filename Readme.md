@@ -18,10 +18,8 @@ versehen.
 * Projekte haben die möglichkeit zu Messen wie viele Mitarbeiter mit gewissen Qualifikationen vorhanden sind.
 * Es gibt keine Kontrolle, ob diese Grenze überschritten oder unterschritten wird.
 
-## Missing/Unfinished
-
-### Tests
-### Jira Pflege
+## Nicht erfüllt / nicht Vollständig / Funktioniert nicht richtig 
+* Die Integrationstest funktionieren nicht. 
 
 ## Requirements
 * Docker https://docs.docker.com/get-docker/

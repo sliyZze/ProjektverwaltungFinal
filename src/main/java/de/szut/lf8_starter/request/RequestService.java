@@ -29,7 +29,7 @@ public abstract class RequestService {
         return new HttpEntity<>(headers);
     }
 
-    protected String getJwtToken() {
+    public String getJwtToken() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth instanceof JwtAuthenticationToken) {
             JwtAuthenticationToken jwtAuthenticationToken = (JwtAuthenticationToken) auth;

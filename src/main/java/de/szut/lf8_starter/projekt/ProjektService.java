@@ -71,7 +71,6 @@ public class ProjektService {
         return matchedQualification;
     }
 
-    //todo maybe exception werfen für die nicht gefundenen qualifikation in der schnittmenge vom request und dem employee?
     public void addEmployeeToProject(long projectId, MitarbeiterGetDto employee, MitarbeiterCreateSkillSet neededEmployeeSkills) {
         checkExistence(projectId);
         ProjektEntity projektEntity = find(projectId);
