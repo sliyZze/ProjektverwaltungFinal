@@ -1,7 +1,7 @@
 package de.szut.lf8_starter.request;
 
 import lombok.Getter;
-import lombok.Setter;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.core.Authentication;

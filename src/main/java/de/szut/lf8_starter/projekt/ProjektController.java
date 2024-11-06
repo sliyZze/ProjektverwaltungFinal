@@ -10,7 +10,6 @@ import de.szut.lf8_starter.projekt.dto.ProjektCreateDtoAllEmployees;
 import de.szut.lf8_starter.projekt.dto.ProjektGetDto;
 import de.szut.lf8_starter.projekt.dto.ProjektUpdateDto;
 import de.szut.lf8_starter.request.RequestKundenService;
-import de.szut.lf8_starter.request.RequestService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

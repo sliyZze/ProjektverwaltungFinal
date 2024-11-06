@@ -1,8 +1,5 @@
 package de.szut.lf8_starter.request;
 
-import de.szut.lf8_starter.exceptionHandling.EmployeeNotFoundException;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 //Author: Tobias
