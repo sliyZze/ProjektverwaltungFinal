@@ -1,5 +1,21 @@
 # Starter für das LF08 Projekt
 
+Dieses Projekt kann Spuren von ChatGpt, Nüssen und Milchpulver enthalten.
+
+Martin und Eren haben viel in Pair Programming gearbeitet. Da Tobias probleme mit Git hatte,
+haben wir unsere änderungen via .zip ausgetauscht. 
+Dadurch sind so gut wie alle commits von Eren durchgeführt worden. 
+
+Um erkenntlich zu machen, wer an welchem Code gearbeitet hat, wurde dieser mit Kommentaren
+versehen. 
+
+## Extra Arbeit
+### --- In den Klassen ProjektEntity und ProjektService ---
+* Projekten können numerische Grenzen für Qualifikationen zugeordnet werden.
+* Projekte haben die möglichkeit zu Messen wie viele Mitarbeiter mit gewissen Qualifikationen vorhanden sind.
+* Es gibt keine Kontrolle, ob diese Grenze überschritten oder unterschritten wird.
+
+
 ## Requirements
 * Docker https://docs.docker.com/get-docker/
 * Docker compose (bei Windows und Mac schon in Docker enthalten) https://docs.docker.com/compose/install/
